@@ -11,7 +11,7 @@ node () {
  			// Maven build step
 	withMaven(maven: 'mvnHome') { 
  			if(isUnix()) {
- 				sh "mvn clean sonar:sonar deploy " 
+ 				sh "mvn clean package " 
 			} else { 
  				bat "mvn clean sonar:sonar deploy " 
 			} 
