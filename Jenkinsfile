@@ -12,7 +12,7 @@ node () {
  			// Maven build step
 	withMaven(maven: 'maven3.6.1') { 
  			if(isUnix()) {
-				sh "{maven3.6.1}\bin\ mvn clean sonar:sonar deploy " 
+				sh "${maven3.6.1}\bin\ mvn clean sonar:sonar deploy " 
 			} else { 
  				bat "mvn clean sonar:sonar deploy " 
 			} 
