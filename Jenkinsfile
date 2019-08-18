@@ -3,7 +3,7 @@
 timestamps {
 
 node () {
-	def mavenhome = tool name: 'maven3.6.1' type: maven
+	def mavenHome=tool name: 'maven3.6.1' type: maven
 
 	stage ('paytm-dev-freestyle - Checkout') {
  	 checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git-hub Credentials', url: 'https://github.com/ashokreddykunduru/maven-web-application.git']]]) 
